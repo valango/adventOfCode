@@ -4,9 +4,8 @@ Joined the [adventofcode.com](https://adventofcode.com) races, with just 80 hrs 
 
 This repo uses semantic versioning in yy.yy.d format.
 
-The dayly quizes solutions are kept in files named like 'day_01.js'.
-
-The files are not edited afterwards - just as dirty as they were born in the heat of the race ;)
+the files named like `day_xx.js` contain daily quiz solutions as they were born -
+quick and dirty - with no afterwards-makeup.
 
 My personal progress:
 
