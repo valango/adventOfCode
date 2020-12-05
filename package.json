@@ -3,7 +3,7 @@
   "version": "20.20.5",
   "description": "adventofcode.com personal progress ",
   "main": "index.js",
-  "homepage": "",
+  "homepage": "https://github.com/valango/adventOfCode",
   "repository": "git://github.com/valango/PROJECT.git",
   "author": "Villem Alango <villem.alango@gmail.com>",
   "license": "MIT",
