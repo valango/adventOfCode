@@ -11,6 +11,8 @@ My personal progress:
 
 ![](progress.png) ![](quote.png)
 
-... and the big picture snapshot:
+* `day 06:` made _a lot_ of horrible typos... all the time!
+
+**Here** is the _big picture_ snapshot:
 
 ![](stats.png)
