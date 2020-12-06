@@ -1,7 +1,7 @@
 {
   "name": "advent-of-code",
-  "version": "20.20.5",
-  "description": "adventofcode.com personal progress ",
+  "version": "20.20.7",
+  "description": "My adventofcode.com personal progress ",
   "main": "index.js",
   "homepage": "https://github.com/valango/adventOfCode",
   "repository": "git://github.com/valango/PROJECT.git",

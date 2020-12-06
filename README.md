@@ -13,6 +13,7 @@ My personal progress:
 ![](progress.png) ![](quote.png)
 
 * `day 06:` made _a lot_ of horrible typos... all the time!
+* `day 07:` met something like never before - but I made it - yay! ;).
 
 **Here** is the _big picture_ snapshot:
 
