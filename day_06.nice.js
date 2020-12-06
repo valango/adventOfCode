@@ -1,6 +1,6 @@
 'use strict'
 
-const input = `donpevkjhymzl
+const rawInput = `donpevkjhymzl
 ezyopckdlnvmj
 
 tqwfdoxvim
@@ -2085,38 +2085,35 @@ smbvnyijzafetrlhdgwqu
 hyevmqlcisxzbfukgndjtwra
 lmzuqfewdjsvrgtahbiny`.split('\n\n')
 
-let counts = []
+/** @type {string[][][]} */
+const input = rawInput.map(group => Array.from(group.split('\n').map(person => Array.from(person))))
+
 let total = 0
 
 for (const group of input) {
-  const acc = {}, yes = {}
-  for (let i = 0, c, n = 0; (c = group[i]) !== undefined; ++i) {
-    if (c >= 'a' && c <= 'z') {
-      acc[c] = acc[c] || 1
+  const yes = new Set()
+
+  for (const answers of group) {
+    for (const answer of answers) {
+      yes.add(answer)
     }
   }
-  const n = Reflect.ownKeys(acc).length
-  counts.push(n)
-  total += n
+  total += yes.size
 }
 
-console.log('sum', total, counts)
+console.log('Q1: number of questions with at least one Y answer from a group', total)
 
-counts = []
 total = 0
 
 for (const group of input) {
-  const answers = group.split('\n')
-  const yes = {}
-  answers[0].split('').forEach(k => yes[k] = 1)
+  const yes = new Set(group[0])
 
-  for (let i = 1; i < answers.length; ++i) {
-    Reflect.ownKeys(yes).forEach(k => {
-      if (!answers[i].includes(k)) delete yes[k]
-    })
+  for (let i = 1; i < group.length; ++i) {
+    for (const y of yes) {
+      if (!group[i].includes(y)) yes.delete(y)
+    }
   }
-  const n = Reflect.ownKeys(yes).length
-  counts.push(n)
-  total += n
+  total += yes.size
 }
-console.log('sum', total, counts)
+
+console.log('Q2: number of questions with Y answer from all members of group', total)
