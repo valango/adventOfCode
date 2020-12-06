@@ -6,6 +6,7 @@ This repo uses semantic versioning in yy.yy.d format.
 
 the files named like `day_xx.js` contain daily quiz solutions as they were born -
 quick and dirty - with no afterwards-makeup.
+Sometimes a `day_xx.nice.js` would have that.
 
 My personal progress:
 
