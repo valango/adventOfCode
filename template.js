@@ -3,6 +3,8 @@
 const rawInput = ``
   .split('\n\n')
 
+const assert = require('assert-fine')
+
 const rules = {
   a: /\a:(\d{4})\s/,
   z: /^z$/
@@ -17,6 +19,7 @@ const tr = s => {
 
 const real = 1
 let input = real ? rawInput : []
+
 input = input.map(v => tr(v)).sort((a, b) => a - b)
 
 const q1 = (vi) => {

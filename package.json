@@ -8,8 +8,15 @@
   "author": "Villem Alango <villem.alango@gmail.com>",
   "license": "MIT",
   "keywords": [],
+  "scripts": {
+    "lint": "eslint ./*.nice.js"
+  },
   "engines": {
     "node": ">=10.15.1"
   },
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "assert-fine": "^1.2.2",
+    "eslint": "^7.15.0"
+  }
 }
