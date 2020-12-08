@@ -10,11 +10,13 @@ Sometimes a `day_xx.nice.js` is there, though.
 
 My personal progress:
 
-![](progress.png) ![](quote.png)
-
 * `day 06:` made _a lot_ of horrible typos... all the time!
 * `day 07:` met something like never before - but I made it - yay! ;).
+* `day 08:` lost 4 hours, sleeping well. Quiz was not too hard, but on part #2,<br />
+I got stuck at my _"super-simple"_ solution for way too long.
 
-**Here** is the _big picture_ snapshot:
+![](progress.png) ![](quote.png)
+
+**Here** is the _big picture_ snapshot at the time I finished:
 
 ![](stats.png)

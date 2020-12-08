@@ -5,10 +5,8 @@ const rawInput = ``
 
 const assert = require('assert-fine')
 
-const rules = {
-  a: /\a:(\d{4})\s/,
-  z: /^z$/
-}
+const example = ``
+  .split('\n\n')
 
 const tr = s => {
   let v = s.replace(/a/g, '0').replace(/b/g, '1')
@@ -18,7 +16,7 @@ const tr = s => {
 //  forin forof itar ritar sw try log
 
 const real = 1
-let input = real ? rawInput : []
+let input = real ? rawInput : example
 
 input = input.map(v => tr(v)).sort((a, b) => a - b)
 
