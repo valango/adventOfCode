@@ -9,4 +9,3 @@ yarn.lock
 *.log
 *.tmp
 day_recent.js
-nice.js

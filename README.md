@@ -14,6 +14,7 @@ My personal progress:
 * `day 07:` met something like never before - but I made it - yay! ;).
 * `day 08:` lost 4 hours, sleeping well. Quiz was not too hard, but on part #2,<br />
 I got stuck at my _"super-simple"_ solution for way too long.
+* `day 09:` I _hate_ numbers - I always did!
 
 ![](progress.png) ![](quote.png)
 
