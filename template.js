@@ -1,22 +1,21 @@
 'use strict'
 
-const rawInput = ``
-  .split('\n\n')
+const rawInput = []
+//  The actual input
+rawInput[0] = require('./day_.data')
+//  The 1-st example
+rawInput[1] = ``
+//  The 2-nd example
+rawInput[2] = ``
 
 const assert = require('assert-fine')
-
-const example = ``
-  .split('\n\n')
 
 const tr = s => {
   let v = s.replace(/a/g, '0').replace(/b/g, '1')
   return Number.parseInt(v, 2)
 }
 
-//  forin forof itar ritar sw try log
-
-const real = 1
-let input = real ? rawInput : example
+let input = rawInput[1].split('\n\n')
 
 input = input.map(v => tr(v)).sort((a, b) => a - b)
 
