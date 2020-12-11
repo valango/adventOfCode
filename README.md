@@ -17,6 +17,7 @@ The track record:
 * `day 09:` I _hate_ numbers - I always did!
 * `day 10:` Almost flunked the part#2, wasting several hours trying to apply a tree traversal
 approach that was inadequate. The right solution was much simpler. But, I still hate numbers. 😝
+* `day 11:` I love simulations! Lost some time because of invalid looping condition (a typo).
 
 ![](progress.png) ![](quote.png)
 
