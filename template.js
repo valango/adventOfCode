@@ -9,6 +9,9 @@ rawInput[1] = ``
 rawInput[2] = ``
 
 const assert = require('assert-fine')
+assert.hook(() => {
+  console.log('breakpoint place')
+})
 
 const tr = s => {
   let v = s.replace(/a/g, '0').replace(/b/g, '1')
