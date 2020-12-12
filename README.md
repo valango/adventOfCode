@@ -44,4 +44,5 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 | 3 | 68239 | - | 66053 | - | |
 | 2 | 85973 | - | 83496 | -| |
 | 1 | 108496 | - | 101541 | - | |
+
 ![](quote.png)
