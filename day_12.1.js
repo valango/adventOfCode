@@ -60,7 +60,7 @@ const q1 = () => {
 }
 
 assert.hook(() => {
-  console.log(1)
+  console.log('breakpoint place')
 })
 
 console.log('Q1', q1())
