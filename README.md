@@ -19,15 +19,15 @@ Sometimes a `day_xx.nice.js` is there, though.
 approach that was inadequate. The right solution was much simpler. But, I still hate numbers. 😝
 * `day 11:` I love simulations! Lost some time because of invalid looping condition (a typo).
 * `day 12:` I was about to go nuts! The puzzle #1 solution worked w example data; but with real data I received:
-"Wrong answer! Curiously enough, this is correct answer for somebody else - make sure you
-logged in with right account!" After losing an insane amount of time, I finally figured out
+_"Wrong answer! Curiously enough, this is correct answer for somebody else - make sure you
+logged in with right account!"_ After losing an insane amount of time, I finally figured out
 there was a tiny error in my ingenious direction computing ([day_12.1.js](day_12.1.js) line 40,41).
-This clearly shows, how even testing your code won't guarantee it's correct. 
+<br />This clearly shows, how even testing your code won't guarantee it's correct. 
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
-column shows the ratio of people done both puzzles, from all participants,
-by the time I finished the puzzle #2. Of course the time zone difference gives us
+column shows the ratio of people done w both puzzles, from all participants,
+by the time I made it. Of course the time zone difference gives us
 the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
