@@ -23,6 +23,11 @@ _"Wrong answer! Curiously enough, this is correct answer for somebody else - mak
 logged in with right account!"_ After losing an insane amount of time, I finally figured out
 there was a tiny error in my ingenious direction computing ([day_12.1.js](day_12.1.js) line 40,41).
 <br />This clearly shows, how even testing your code won't guarantee it's correct. 
+* `day 13:` The first part was simple, but I failed with the second part -
+my solution worked with sample data but did not reach the end with the actual one.
+Finally, I used an absolutely fantastic solution from another guy (see code), and it still
+took quite an effort to understand how and why it worked. Btw, my initial code worked
+correctly, too, when using reasonable initial time value from that one. 😝
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -32,6 +37,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 13 | 4840 | 00:23:21 | 8208 | 06:36:47 | 5 |
 | 12 | 7251 | 01:27:40 | 6781 | 02:16:59 | 5 |
 | 11 | 5046 | 00:58:41 | 3947 | 01:18:42 | 3 |
 | 10 | 8294 | 00:40:41 | 8831 | 03:26:43 | 7 |
