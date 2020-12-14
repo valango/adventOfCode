@@ -40,6 +40,9 @@ const algorithm2 = (mem, aMask, addr, value) => {
     if (aMask[i] === '1') addr |= bit
   }
 
+  //  NB: the strategy here works fine with real data, but
+  //  it would burn with INPUT = 1 because of a massive amount of 'X'-es!
+  //  I wonder if a good generic solution exists?
   const variants = [addr]
 
   const add = (v) => {
@@ -62,9 +65,9 @@ const algorithm2 = (mem, aMask, addr, value) => {
 }
 
 const compute = (algorithm) => {
-  const mem = new Map()
+  const lines = rawInput[INPUT].split('\n'), mem = new Map()
   const M = 'mask = ', L = M.length
-  let lines = rawInput[INPUT].split('\n'), aMask = 0
+  let aMask = ''
 
   for (let i = 0, line; (line = lines[i]) !== undefined; ++i) {
     if (line.indexOf(M) === 0) {
@@ -72,11 +75,9 @@ const compute = (algorithm) => {
       assert(aMask.length === 36, line, i)
     } else {
       const r = /^mem\[(\d+)]\s=\s(\d+)$/.exec(line)
+
       assert(r, line, i)
-
-      let value = BigInt(r[2] * 1), addr = BigInt(r[1])
-
-      algorithm(mem, aMask, addr, value)
+      algorithm(mem, aMask, BigInt(r[1]), BigInt(r[2] * 1))
     }
   }
 

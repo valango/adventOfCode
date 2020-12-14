@@ -29,7 +29,9 @@ Finally, I used an absolutely fantastic solution from another guy (see code), an
 took quite an effort to understand how and why it worked. Btw, my initial code worked
 correctly, too, when using reasonable initial time value from that one. 😝
 * `day 13:` Enjoyed that one - except losing about an hour on part#1 because
-of not noticing my typo in looping condition (line 28 of [day_14.js](day_14.js))!
+of not noticing my typo in looping condition (line 28 of [day_14.js](day_14.js))!<br />
+Interesting: the algorithm2 in my code would melt down with sample dataset for
+the puzzle#1, but works fine with the real data ... I wonder if a good generic solution exists?
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
