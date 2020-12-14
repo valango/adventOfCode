@@ -4,7 +4,7 @@
   "description": "My adventofcode.com personal progress ",
   "main": "index.js",
   "homepage": "https://github.com/valango/adventOfCode",
-  "repository": "git://github.com/valango/PROJECT.git",
+  "repository": "git://github.com/valango/adventOfCode.git",
   "author": "Villem Alango <villem.alango@gmail.com>",
   "license": "MIT",
   "keywords": [],

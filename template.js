@@ -24,7 +24,7 @@ const algorithm1 = () => {
   return
 }
 
-const algorithm2 = () => {
+const algorithm2 = () => {q
   return
 }
 
