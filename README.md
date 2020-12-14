@@ -28,6 +28,8 @@ my solution worked with sample data but did not reach the end with the actual on
 Finally, I used an absolutely fantastic solution from another guy (see code), and it still
 took quite an effort to understand how and why it worked. Btw, my initial code worked
 correctly, too, when using reasonable initial time value from that one. 😝
+* `day 13:` Enjoyed that one - except losing about an hour on part#1 because
+of not noticing my typo in looping condition (line 28 of [day_14.js](day_14.js))!
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -37,6 +39,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 13 | 6743 | 01:44:14 | 5484 | 06:36:47 | 4 |
 | 13 | 4840 | 00:23:21 | 8208 | 06:36:47 | 5 |
 | 12 | 7251 | 01:27:40 | 6781 | 02:16:59 | 5 |
 | 11 | 5046 | 00:58:41 | 3947 | 01:18:42 | 3 |
