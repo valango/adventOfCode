@@ -35,3 +35,25 @@ const q2 = (vi) => {
 }
 
 console.log('Q2', q2(input))
+
+/*
+**PROJECT TITLE:** $project_title
+
+**DESCRIPTION:** $short_desc_here_(max_140_characters)
+
+**SUBMITTED BY:** /u/$your_username{, $submitter2, $submitter3...}
+
+**MEGATHREADS:** [$day1]($link1) [$day2]($link2) [$day3]($link3) [$day4]($link4) [$day5]($link5) {...}
+
+***
+
+**SUBMISSION:**
+
+{$your_text_submission_here}
+
+***
+
+**ADDITIONAL COMMENTS:**
+
+{$include_more_details_if_necessary}
+*/

@@ -1,5 +1,7 @@
 'use strict'
 
+const execute = require('./execute')
+
 const rawInput = []
 //  The actual input
 rawInput[0] = require('./day_14.data')
@@ -43,19 +45,16 @@ const algorithm2 = (mem, aMask, addr, value) => {
   //  NB: the strategy here works fine with real data, but
   //  it would burn with INPUT = 1 because of a massive amount of 'X'-es!
   //  I wonder if a good generic solution exists?
-  const variants = [addr]
-
-  const add = (v) => {
-    if (!variants.includes(v)) variants.push(v)
-  }
+  const variants = new Set().add(addr)
+  //  Using the Set in place of an Array (see commit acae335)
+  //  results in almost 3x increase of speed!
 
   for (let i = 0, bit = 1n; i < 36; ++i, bit <<= 1n) {
     if (aMask[i] !== 'X') continue
 
-    for (let i = 0, n = variants.length, v; i < n; ++i) {
-      v = variants[i]
-      add(v | bit)
-      add(v & ~bit)
+    for (const v of variants.values()) {
+      variants.add(v | bit)
+      variants.add(v & ~bit)
     }
   }
 
@@ -88,6 +87,5 @@ const compute = (algorithm) => {
   return sum
 }
 
-console.log('Q1', compute(algorithm1)) // 14925946402938n
-
-console.log('Q2', compute(algorithm2)) // 3706820676200
+execute('puzzle #1', compute, algorithm1)
+execute('puzzle #2', compute, algorithm2)
