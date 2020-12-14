@@ -1,7 +1,9 @@
 //  Runs a puzzle solution, reporting the time.
 'use strict'
 
+const assert = require('assert-fine')
 const { format } = require('util')
+
 const MAXN = BigInt(Number.MAX_SAFE_INTEGER)
 
 const print = msg => process.stdout.write(msg)
@@ -22,6 +24,13 @@ const execute = (label, fn, ...args) => {
 
   print(format('\n%s: %o\n\telapsed: %s µsecs\n',
     label, result, usecs.padStart(15)))
+}
+
+execute.assert = assert
+
+execute.hook = (callback)=>{
+  assert.hook(callback)
+  return assert
 }
 
 module.exports = execute

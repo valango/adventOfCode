@@ -1,7 +1,5 @@
 'use strict'
 
-const execute = require('./execute')
-
 const rawInput = []
 //  The actual input
 rawInput[0] = require('./day_14.data')
@@ -18,9 +16,9 @@ mem[26] = 1`
 
 let INPUT = 0                       //  Input data selector.
 
-const assert = require('assert-fine')
-assert.hook(() => {
-  console.log('breakpoint place')   //  Yeah, sometimes I have to use this!
+const execute = require('./execute')
+const assert = execute.hook(() => {
+  console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 
 const algorithm1 = (mem, aMask, addr, value) => {

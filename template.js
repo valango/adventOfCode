@@ -8,9 +8,11 @@ rawInput[1] = ``
 //  The 2-nd example
 rawInput[2] = ``
 
-const assert = require('assert-fine')
-assert.hook(() => {
-  console.log('breakpoint place')
+let INPUT = 0                       //  Input data selector.
+
+const execute = require('./execute')
+const assert = execute.hook(() => {
+  console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 
 const tr = s => {
@@ -18,23 +20,24 @@ const tr = s => {
   return Number.parseInt(v, 2)
 }
 
-let input = rawInput[1].split('\n\n')
-
-input = input.map(v => tr(v)).sort((a, b) => a - b)
-
-const q1 = (vi) => {
-  return vi
+const algorithm1 = () => {
+  return
 }
 
-console.log('Q1', q1(input))
-
-process.exit(0)
-
-const q2 = (vi) => {
-  return vi
+const algorithm2 = () => {
+  return
 }
 
-console.log('Q2', q2(input))
+const compute = algorithm => {
+  let input = rawInput[INPUT].split('\n\n')
+
+  input = input.map(v => tr(v)).sort((a, b) => a - b)
+
+  return algorithm(input)
+}
+
+execute('puzzle #1', compute, algorithm1)
+execute('puzzle #2', compute, algorithm2)
 
 /*
 **PROJECT TITLE:** $project_title
