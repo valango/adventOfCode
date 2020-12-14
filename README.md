@@ -28,7 +28,7 @@ my solution worked with sample data but did not reach the end with the actual on
 Finally, I used an absolutely fantastic solution from another guy (see code), and it still
 took quite an effort to understand how and why it worked. Btw, my initial code worked
 correctly, too, when using reasonable initial time value from that one. 😝
-* `day 13:` Enjoyed that one - except losing about an hour on part#1 because
+* `day 14:` Enjoyed that one - except losing about an hour on part#1 because
 of not noticing my typo in looping condition (line 28 of [day_14.js](day_14.js))!<br />
 Interesting: the _`algorithm2()`_ in my code would melt down with sample dataset for
 the puzzle#1, but works fine with the real data ... I wonder if a good generic solution exists?
