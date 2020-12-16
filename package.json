@@ -9,7 +9,7 @@
   "license": "MIT",
   "keywords": [],
   "scripts": {
-    "lint": "eslint ./*.nice.js"
+    "lint": "eslint ./*.js"
   },
   "engines": {
     "node": ">=10.15.1"

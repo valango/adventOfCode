@@ -2,7 +2,7 @@
 
 const rawInput = []
 //  The actual input
-rawInput[0] = require('./day_14.data')
+rawInput[0] = require('./data/day_14')
 //  The 1-st example
 rawInput[1] = `mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
 mem[8] = 11

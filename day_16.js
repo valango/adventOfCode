@@ -1,9 +1,9 @@
-//  day_16.js
 'use strict'
+const THIS = 'day_16'
 
 const rawInput = []
 //  The actual input
-rawInput[0] = require('./day_16.data')
+rawInput[0] = require('./data/' + THIS)
 //  The 1-st example
 rawInput[1] = `class: 1-3 or 5-7
 row: 6-11 or 33-44

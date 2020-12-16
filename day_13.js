@@ -2,7 +2,7 @@
 
 const rawInput = []
 //  The actual input
-rawInput[0] = require('./day_13.data')
+rawInput[0] = require('./data/day_13')
 //  The 1-st example
 rawInput[1] = `939
 7,13,x,x,59,x,31,19`
