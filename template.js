@@ -1,3 +1,4 @@
+//  day_.js
 'use strict'
 
 const rawInput = []
@@ -7,8 +8,6 @@ rawInput[0] = require('./day_.data')
 rawInput[1] = ``
 //  The 2-nd example
 rawInput[2] = ``
-
-let INPUT = 0                       //  Input data selector.
 
 const execute = require('./execute')
 const assert = execute.hook(() => {
@@ -28,16 +27,16 @@ const algorithm2 = () => {
   return
 }
 
-const compute = algorithm => {
-  let input = rawInput[INPUT].split('\n\n')
+const compute = (dataSet, algorithm) => {
+  let input = rawInput[dataSet].split('\n\n')
 
   input = input.map(v => tr(v)).sort((a, b) => a - b)
 
   return algorithm(input)
 }
 
-execute('puzzle #1', compute, algorithm1)
-execute('puzzle #2', compute, algorithm2)
+execute('puzzle #1', compute, 1, algorithm1)
+// execute('puzzle #2', compute, 1, algorithm2)
 
 /*
 **PROJECT TITLE:** $project_title

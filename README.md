@@ -32,8 +32,10 @@ correctly, too, when using reasonable initial time value from that one. 😝
 of not noticing my typo in looping condition (line 28 of [day_14.js](day_14.js))!<br />
 Interesting: the _`algorithm2()`_ in my code would melt down with sample dataset for
 the puzzle#1, but works fine with the real data ... I wonder if a good generic solution exists?
-* `day 14:` This was an absolutely awesome puzzle! The hardest part was to understand
+* `day 15:` This was an absolutely awesome puzzle! The hardest part was to understand
 the wording. I was able to code only after executing the solution path on paper! 
+* `day 16:` I liked that one! As usual, typos (inside the _regExpr_ - this time),
+were my worst enemies. 👻 👺 💩
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -43,6 +45,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 16 | 4950 | 00:49:02 | 3362 | 02:30:14 | **2** |
 | 15 | 6816 | 01:29:30 | 5554 | 01:33:16 | 4 |
 | 14 | 6743 | 01:44:14 | 5484 | 06:36:47 | 4 |
 | 13 | 4840 | 00:23:21 | 8208 | 06:36:47 | 5 |
