@@ -36,6 +36,11 @@ the puzzle#1, but works fine with the real data ... I wonder if a good generic s
 the wording. I was able to code only after executing the solution path on paper! 
 * `day 16:` I liked that one! As usual, typos (inside the _regExpr_ - this time),
 were my worst enemies. 👻 👺 💩
+* `day 17:` That was even better - a simulation in 4-D hyperspace 🌘 👽 🌒 
+is pretty cool - isn't it?<br />
+The hyperspace challenge unveiled only after solving the part #1 (3D)
+and I felt a strong temptation to write a _generalized n-dimensional 
+algorithm_, but it turned out to be a bit too challenging, so I rolled back to fixed dimensions.
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -45,6 +50,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 17 | 2848 | 01:04:57 | 3667 | 01:50:22 | **2** |
 | 16 | 4950 | 00:49:02 | 3362 | 02:30:14 | **2** |
 | 15 | 6816 | 01:29:30 | 5554 | 01:33:16 | 4 |
 | 14 | 6743 | 01:44:14 | 5484 | 06:36:47 | 4 |

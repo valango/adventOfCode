@@ -14,7 +14,7 @@ const assert = execute.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 
-const tr = s => {
+const parseInput = s => {
   let v = s.replace(/a/g, '0').replace(/b/g, '1')
   return Number.parseInt(v, 2)
 }
@@ -30,7 +30,7 @@ const algorithm2 = () => {
 const compute = (dataSet, algorithm) => {
   let input = rawInput[dataSet].split('\n\n')
 
-  input = input.map(v => tr(v)).sort((a, b) => a - b)
+  input = input.map(v => parseInput(v)).sort((a, b) => a - b)
 
   return algorithm(input)
 }
