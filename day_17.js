@@ -1,4 +1,10 @@
-//  day_17
+//  day_17:
+//  Given is a 2-dimensional slice of a 3- or 4-d space, where
+//  '#' denotes an existing agent.
+//  An agent dies when not having exactly 2 or 3 neighbors, and
+//  in the neighborhood of exactly 3, a new agent will emerge.
+//  This is similar to iconic Life simulation game from the Jurassic era,
+//  or to the day_11 puzzle.
 'use strict'
 const rawInput = []
 //  The actual input
