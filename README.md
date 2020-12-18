@@ -42,7 +42,7 @@ The hyperspace challenge unveiled only after solving the part #1 (3D)
 and I felt a strong temptation to write a _generalized n-dimensional 
 algorithm_, but it turned out to be a bit too challenging, so I rolled back to fixed dimensions.
 * `day 18:` Nothing particularly hard, but... those damn RegExpr lines -
-I always leave some tiny 🐛🐛🐛 bugs in there - I might need an 🐓🐓🐓 assistance! 
+I always leave some tiny 🐛🐛🐛 bugs in there - I might need 🐓🐓🐓 an assistance! 
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'

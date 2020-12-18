@@ -10,7 +10,7 @@ rawInput[1] = `1 + 2 * 3 + 4 * 5 + 6
 //  The 2-nd example
 rawInput[2] = ``
 
-const execute = require('./execute')
+const { datasetNumber, execute } = require('./execute')
 
 //  A really simple interpreter - just evaluate the leftmost tuple
 //  and replace with the result.
@@ -40,8 +40,8 @@ const algorithm2 = (input) => {
   return text
 }
 
-const compute = (dataSet, algorithm) => {
-  let lines = rawInput[dataSet].split('\n')
+const compute = (inputNumber, algorithm) => {
+  let lines = rawInput[inputNumber].split('\n')
 
   return lines.reduce((acc, line, num) => {
     let text = line, r
@@ -53,14 +53,14 @@ const compute = (dataSet, algorithm) => {
     }
 
     text = algorithm(text)    //  Compute the flattened expression.
-    dataSet && console.log(`${num}:`, line, '-->', text)
+    inputNumber && console.log(`${num}:`, line, '-->', text)
 
     return acc + 1 * text.trim()
   }, 0)
 }
 
-execute('puzzle #1', compute, 1, algorithm1)
-execute('puzzle #2', compute, 1, algorithm2)
+execute('puzzle #1', compute, datasetNumber, algorithm1)
+execute('puzzle #2', compute, datasetNumber, algorithm2)
 /*
 puzzle #1: 53660285675207
 	elapsed:            6895 µsecs

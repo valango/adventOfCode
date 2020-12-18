@@ -16,8 +16,8 @@ mem[26] = 1`
 
 let INPUT = 0                       //  Input data selector.
 
-const execute = require('./execute')
-const assert = execute.hook(() => {
+const { assert, execute } = require('./execute')
+assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 

@@ -30,8 +30,8 @@ nearby tickets:
 15,1,5
 5,14,9`
 
-const execute = require('./execute')
-const assert = execute.hook(() => {
+const { assert, execute } = require('./execute')
+assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 
