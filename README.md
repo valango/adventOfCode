@@ -41,6 +41,8 @@ is pretty cool - isn't it?<br />
 The hyperspace challenge unveiled only after solving the part #1 (3D)
 and I felt a strong temptation to write a _generalized n-dimensional 
 algorithm_, but it turned out to be a bit too challenging, so I rolled back to fixed dimensions.
+* `day 18:` Nothing particularly hard, but... those damn RegExpr lines -
+I always leave some tiny 🐛🐛🐛 bugs in there - I might need an 🐓🐓🐓 assistance! 
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -50,6 +52,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 18 | 4214 | 01:27:38 | 3477 | 01:48:42 | 3 |
 | 17 | 2848 | 01:04:57 | 3667 | 01:50:22 | **2** |
 | 16 | 4950 | 00:49:02 | 3362 | 02:30:14 | **2** |
 | 15 | 6816 | 01:29:30 | 5554 | 01:33:16 | 4 |
