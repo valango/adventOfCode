@@ -24,7 +24,7 @@ const algorithm1 = (input) => {
   return text
 }
 
-//  An 'advanced' one the '+' is more important than '*'.
+//  An 'advanced' one - the '+' is more important than '*'.
 const algorithm2 = (input) => {
   let text = input, r, v
 
@@ -46,7 +46,7 @@ const compute = (inputNumber, algorithm) => {
   return lines.reduce((acc, line, num) => {
     let text = line, r
 
-    //  Find the innermost parentheses and replace with their inner result.
+    //  Find the innermost parentheses and replace with their computed value.
     while ((r = /\(([^()]+)\)/.exec(text)) !== null) {
       const flat = algorithm(r[1])
       text = text.substring(0, r.index) + flat + text.substring(r.index + r[0].length)
