@@ -43,6 +43,9 @@ and I felt a strong temptation to write a _generalized n-dimensional
 algorithm_, but it turned out to be a bit too challenging, so I rolled back to fixed dimensions.
 * `day 18:` Nothing particularly hard, but... those damn RegExpr lines -
 I always leave some tiny 🐛🐛🐛 bugs in there - I might need 🐓🐓🐓 an assistance! 
+* `day 19:` _No, no, no!_ Writing yet another [yacc](https://en.wikipedia.org/wiki/Yacc)
+from the scratch on Sunday morning is just no fun! Could not make the part #2, because my code
+never choked at recursive rules. 🤡
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -52,6 +55,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 19 | 5172 | 04:36:09 |  |  |  |
 | 18 | 4214 | 01:27:38 | 3477 | 01:48:42 | 3 |
 | 17 | 2848 | 01:04:57 | 3667 | 01:50:22 | **2** |
 | 16 | 4950 | 00:49:02 | 3362 | 02:30:14 | **2** |
