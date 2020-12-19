@@ -24,7 +24,7 @@ const execute = (label, fn, ...args) => {
     result = Number(result)
   }
 
-  print(format('\n%s(dataset #%i): %o\n\telapsed: %s µsecs\n',
+  print(format('\n%s / dataset %i: %o\n\telapsed: %s µsecs\n',
     label, n, result, usecs.padStart(15)))
 }
 
