@@ -9,10 +9,12 @@ rawInput[1] = ``
 //  The 2-nd example
 rawInput[2] = ``
 
-const execute = require('./execute')
-const assert = execute.hook(() => {
+const { assert, datasetNumber, execute } = require('./execute')
+
+assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
+//  --- End of boilerplate ---
 
 const parseInput = s => {
   let v = s.replace(/a/g, '0').replace(/b/g, '1')
@@ -27,7 +29,7 @@ const algorithm2 = () => {
   return
 }
 
-const compute = (dataSet, algorithm) => {
+const compute = (algorithm, dataSet = datasetNumber) => {
   let input = rawInput[dataSet].split('\n\n')
 
   input = input.map(v => parseInput(v)).sort((a, b) => a - b)
@@ -35,8 +37,8 @@ const compute = (dataSet, algorithm) => {
   return algorithm(input)
 }
 
-execute('puzzle #1', compute, 1, algorithm1)
-// execute('puzzle #2', compute, 1, algorithm2)
+execute('puzzle #1', compute, algorithm1)
+execute('puzzle #2', compute, algorithm2)
 
 /*
 **PROJECT TITLE:** $project_title

@@ -46,6 +46,10 @@ I always leave some tiny 🐛🐛🐛 bugs in there - I might need 🐓🐓🐓 
 * `day 19:` _No, no, no!_ Writing yet another [yacc](https://en.wikipedia.org/wiki/Yacc)
 from the scratch on Sunday morning is just no fun! Could not make the part #2, because my code
 never choked at recursive rules. 🤡
+* `day 20:` An exciting one! I was sweating blood, working on general solution,
+before I got hint, that there is exactly 4 tiles easily recognizable as corners,
+in _the real data_ (not in the example data). Have no time left for the puzzle #2 today. 😑
+<br />It always pays off to take a break from coding and play w data.
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -55,7 +59,8 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
-| 19 | 5172 | 04:36:09 |  |  |  |
+| 20 | 6655 | 08:15:59 |  |  |  |
+| 19 | 5172 | 04:36:09 | 5753 | 09:28:53 |  |
 | 18 | 4214 | 01:27:38 | 3477 | 01:48:42 | 3 |
 | 17 | 2848 | 01:04:57 | 3667 | 01:50:22 | **2** |
 | 16 | 4950 | 00:49:02 | 3362 | 02:30:14 | **2** |
