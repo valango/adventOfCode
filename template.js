@@ -14,6 +14,9 @@ const { assert, datasetNumber, execute } = require('./execute')
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
+
+const shared = {}     //  Shared namespace for results forwarding.
+
 //  --- End of boilerplate ---
 
 const parseInput = s => {
@@ -32,9 +35,9 @@ const algorithm2 = () => {
 const compute = (algorithm, dataSet = datasetNumber) => {
   let input = rawInput[dataSet].split('\n\n')
 
-  input = input.map(v => parseInput(v)).sort((a, b) => a - b)
+  shared.data = input.map(v => parseInput(v)).sort((a, b) => a - b)
 
-  return algorithm(input)
+  return algorithm(shared)
 }
 
 execute('puzzle #1', compute, algorithm1)

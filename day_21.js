@@ -18,23 +18,23 @@ assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
 })
 
-const shared = Object.create(null)
+const shared = {}     //  Shared namespace for results forwarding.
 
 //  --- End of boilerplate ---
 
 //  Find the ingredients possibly not using any of allergens in foods list.
 //  Return the total count these ingredients are used in foods list.
-const algorithm1 = () => {
-  const { foods } = shared
+const algorithm1 = namespace => {
+  const { foods } = namespace
 
-  const allIngredients = new Set(
+  const ingredientsSet = new Set(
     foods.reduce((all, { ingredients }) => all.concat(ingredients), [])
   )
 
   const possibleUses = new Map()
 
   for (const { allergens } of foods) {
-    for (const allergen of allergens) possibleUses.set(allergen, new Set(allIngredients))
+    for (const allergen of allergens) possibleUses.set(allergen, new Set(ingredientsSet))
   }
 
   //  If allergen is declared in food, delete all it's uses not in food.ingredients.
@@ -48,27 +48,26 @@ const algorithm1 = () => {
     }
   }
 
-  const inertIngredients = new Set(allIngredients)
-
+  //  Remove all ingredients is use, leaving the possibly inert ones.
   for (const ings of possibleUses.values()) {
-    for (const ing of ings) inertIngredients.delete(ing)
+    for (const ing of ings) ingredientsSet.delete(ing)
   }
 
-  let sum = 0
+  let totalMentioned = 0    //  How many times the inert ingredients appeared in foods.
 
   for (const { ingredients } of foods) {
-    for (const ing of ingredients) sum += inertIngredients.has(ing)
+    for (const ing of ingredients) totalMentioned += ingredientsSet.has(ing)
   }
 
-  Object.assign(shared, { possibleUses })
+  Object.assign(namespace, { possibleUses })
 
-  return sum
+  return totalMentioned
 }
 
 //  Find allergen is actually used in every ingredient.
 //  Create list of ingredients sorted by their allergen, like : 'mxmxvkd,sqjhc,fvjkl'
-const algorithm2 = () => {
-  const { possibleUses } = shared, ingredients = new Map(), keys = []
+const algorithm2 = namespace => {
+  const { possibleUses } = namespace, ingredients = {}
 
   for (let alg, using; ; using = undefined) {
     for (const [allergen, uses] of possibleUses.entries()) {
@@ -80,14 +79,13 @@ const algorithm2 = () => {
 
     if (!using) break
 
-    keys.push(alg)
-    ingredients.set(alg, using)
+    ingredients[alg] = using
     possibleUses.delete(alg)
 
     for (const uses of possibleUses.values()) uses.delete(using)
   }
 
-  return keys.sort().map(k => ingredients.get(k)).join(',')
+  return Reflect.ownKeys(ingredients).sort().map(k => ingredients[k]).join(',')
 }
 
 const parseInput = line => {
@@ -96,14 +94,13 @@ const parseInput = line => {
 }
 
 const compute = (algorithm, dataSet = datasetNumber) => {
-  let input = rawInput[dataSet].split('\n')
+  const input = rawInput[dataSet].split('\n')
 
   if (!shared.foods) {
     shared.foods = input.map(line => parseInput(line))
-    return algorithm1()
+    return algorithm1(shared)
   }
-
-  return algorithm()
+  return algorithm(shared)
 }
 
 execute('puzzle #1', compute, algorithm1)
