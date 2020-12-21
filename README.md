@@ -50,6 +50,8 @@ never choked at recursive rules. 🤡
 before I got hint, that there is exactly 4 tiles easily recognizable as corners,
 in _the real data_ (not in the example data). Have no time left for the puzzle #2 today. 😑
 <br />It always pays off to take a break from coding and play w data.
+* `day 21:` I took my time with the puzzle text, but just could not fully understand it.
+So I took a nap instead. After this, everything was so much better.
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -59,6 +61,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 21 | 7867 | 08:50:59 | 7895 | 09:35:48 | 6 |
 | 20 | 6655 | 08:15:59 |  |  |  |
 | 19 | 5172 | 04:36:09 | 5753 | 09:28:53 |  |
 | 18 | 4214 | 01:27:38 | 3477 | 01:48:42 | 3 |
