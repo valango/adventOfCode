@@ -24,30 +24,35 @@ const execute = (label, fn, ...args) => {
     result = Number(result)
   }
 
-  print(format('\n%s / dataset %i: %o\n\telapsed: %s µsecs\n',
-    label, n, result, usecs.padStart(15)))
+  print(format('\n%s / dataset %i: %o\n  t:%s µsecs\n',
+    label, n, result, usecs.padStart(12)))
 }
 
 const assertionHook = (callback) => {
   assert.hook(callback)
   return assert
 }
+const appName = basename(require.main.filename)
+const usage = `usage: node ${appName} [<number-of-dataset>] [help] [debug]\n`
 
-let datasetNumber = 0
+let datasetNumber = 0, debug = false, help
 
 if (process.argv.length > 2) {
-  const arg = process.argv[2]
-  datasetNumber = 1 * arg
-
-  if (!(datasetNumber >= 0)) {
-    const appName = basename(require.main.filename)
-    const usage = `usage: node ${appName} [<number-of-dataset>]\n`
-
-    if ('-h --help help'.split(' ').includes(arg)) {
-      process.stdout.write(usage)
-      process.exit(0)
+  for (const arg of process.argv.slice(2)) {
+    if (arg[0] === 'd') {
+      debug = true
+    } else if (arg[0] === 'h') {
+      help = true
+    } else {
+      datasetNumber = 1 * arg
     }
-    process.stderr.write('bad argument: ' + arg + '\n')
+  }
+  if(help){
+    process.stdout.write(usage)
+    process.exit(0)
+  }
+  if (!(datasetNumber >= 0)) {
+    process.stderr.write(`bad arguments: '` + process.argv.slice(2).join( ' ') + `'\n`)
     process.stdout.write(usage)
     process.exit(1)
   }
@@ -55,4 +60,6 @@ if (process.argv.length > 2) {
 
 exports = module.exports = execute
 
-Object.assign(exports, { assert, assertionHook, datasetNumber, execute })
+Object.assign(exports,
+  { assert, assertionHook, datasetNumber, debug, execute }
+)

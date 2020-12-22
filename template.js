@@ -9,7 +9,7 @@ rawInput[1] = ``
 //  The 2-nd example
 rawInput[2] = ``
 
-const { assert, datasetNumber, execute } = require('./execute')
+const { assert, datasetNumber, debug, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
