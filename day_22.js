@@ -78,7 +78,7 @@ const algorithm2 = (decks, data) => {
   decks.forEach(deck => deck.shift())
   data.winner = decideWinner(data.cards)
 
-  if (decks.every((deck, i) => {
+  if (decks.every((deck, i) => {            //  Check the rule 3.
     return deck.length >= data.cards[i]
   })) {
     const copies = data.cards.map((n, i) => decks[i].slice(0, n))
