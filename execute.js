@@ -15,9 +15,23 @@ const usecsFrom = t0 => {
   return (t1[0] * 1e9 + t1[1]) / 1000
 }
 
-const execute = (label, fn, ...args) => {
-  const t0 = process.hrtime(), n = exports.datasetNumber
-  let result = fn.apply(null, args)
+const appName = basename(require.main.filename)
+const usage = `usage: node ${appName} [dataset-number, ...] [help] [debug]\n`
+
+let cliArgs = [], debug = false, help
+
+//  label, fn, algorithm, ...defaults)
+const execute = (label, fn, ...parms) => {
+  let args = [0], [algorithm, ...defaults] = parms
+
+  if (typeof algorithm !== 'function') defaults = parms, algorithm = undefined
+
+  for (let i = 0; i < defaults.length; ++i) {
+    args[i] = i < cliArgs.length ? cliArgs[i] : defaults[i]
+  }
+
+  const t0 = process.hrtime()
+  let result = algorithm ? fn(algorithm, ...args) : fn(...args)
   const usecs = Math.floor(usecsFrom(t0)) + ''
 
   if (typeof result === 'bigint' && result < MAXN) {
@@ -25,34 +39,33 @@ const execute = (label, fn, ...args) => {
   }
 
   print(format('\n%s / dataset %i: %o\n  t:%s µsecs\n',
-    label, n, result, usecs.padStart(12)))
+    label, args[0], result, usecs.padStart(12)))
 }
 
 const assertionHook = (callback) => {
   assert.hook(callback)
   return assert
 }
-const appName = basename(require.main.filename)
-const usage = `usage: node ${appName} [<number-of-dataset>] [help] [debug]\n`
-
-let datasetNumber = 0, debug = false, help
 
 if (process.argv.length > 2) {
+  let bad = false, v
   for (const arg of process.argv.slice(2)) {
     if (arg[0] === 'd') {
       debug = true
     } else if (arg[0] === 'h') {
       help = true
     } else {
-      datasetNumber = 1 * arg
+
+      cliArgs.push(v = 1 * arg)
+      if (!(v >= 0)) bad = true
     }
   }
-  if(help){
+  if (help) {
     process.stdout.write(usage)
     process.exit(0)
   }
-  if (!(datasetNumber >= 0)) {
-    process.stderr.write(`bad arguments: '` + process.argv.slice(2).join( ' ') + `'\n`)
+  if (bad) {
+    process.stderr.write(`bad cliArgs: '` + process.argv.slice(2).join(' ') + `'\n`)
     process.stdout.write(usage)
     process.exit(1)
   }
@@ -61,5 +74,5 @@ if (process.argv.length > 2) {
 exports = module.exports = execute
 
 Object.assign(exports,
-  { assert, assertionHook, datasetNumber, debug, execute }
+  { assert, assertionHook, debug, execute }
 )

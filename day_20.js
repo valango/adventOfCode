@@ -9,7 +9,7 @@ rawInput[1] = require('./data/' + THIS + '.1')
 //  The 2-nd example
 rawInput[2] = ``
 
-const { assert, datasetNumber, execute } = require('./execute')
+const { assert, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
@@ -73,7 +73,7 @@ const algorithm1 = () => {
 
 const algorithm2 = () => '--- not implemented ---'
 
-const compute = (algorithm, dataSet = datasetNumber) => {
+const compute = (algorithm, dataSet) => {
   edges = []
   tiles = rawInput[dataSet].split('\n\n').map(parseInput)
 

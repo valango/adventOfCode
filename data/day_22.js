@@ -1,6 +1,6 @@
 'use strict'
 
-exports = module.exports = `Player 1:
+module.exports = `Player 1:
 21
 48
 44

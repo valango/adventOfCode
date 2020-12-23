@@ -12,7 +12,7 @@ sqjhc mxmxvkd sbzzf (contains fish)`
 //  The 2-nd example
 rawInput[2] = ``
 
-const { assert, datasetNumber, execute } = require('./execute')
+const { assert, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
@@ -93,7 +93,7 @@ const parseInput = line => {
   return { allergens: r[2].split(', '), ingredients: r[1].split(' ') }
 }
 
-const compute = (algorithm, dataSet = datasetNumber) => {
+const compute = (algorithm, dataSet) => {
   const input = rawInput[dataSet].split('\n')
 
   if (!shared.foods) {

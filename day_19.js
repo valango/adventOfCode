@@ -66,7 +66,7 @@ aaaabbaabbaaaaaaabbbabbbaaabbaabaaa
 babaaabbbaaabaababbaabababaaab
 aabbbbbaabbbaaaaaabbbbbababaaaaabbaaabba`
 
-const { assert, datasetNumber, execute } = require('./execute')
+const { assert, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
@@ -162,7 +162,7 @@ const compute = (input) => {
   return sum
 }
 
-const compute1 = (dataSet = datasetNumber) => {
+const compute1 = (dataSet) => {
   let input = rawInput[dataSet].split('\n')
 
   input = input.slice(makeRules(input))

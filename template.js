@@ -1,4 +1,6 @@
 'use strict'
+module.exports = ``
+
 const THIS = 'day_'
 
 const rawInput = []
@@ -9,7 +11,7 @@ rawInput[1] = ``
 //  The 2-nd example
 rawInput[2] = ``
 
-const { assert, datasetNumber, debug, execute } = require('./execute')
+const { assert, debug, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
@@ -32,15 +34,15 @@ const algorithm2 = () => {
   return
 }
 
-const compute = (algorithm, dataSet = datasetNumber) => {
+const compute = (algorithm, dataSet) => {
   let input = rawInput[dataSet].split('\n\n')
 
-  shared.data = input.map(v => parseInput(v)).sort((a, b) => a - b)
+  shared.data = input.map(v => parseInput(v)).sort((a, b) => a - b) //  !!!!!!!!!!
 
   return algorithm(shared)
 }
 
-execute('puzzle #1', compute, algorithm1)
+execute('puzzle #1', compute, algorithm1) // + argument defaults (dataset, ...)
 execute('puzzle #2', compute, algorithm2)
 
 /*

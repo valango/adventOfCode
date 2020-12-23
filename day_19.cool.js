@@ -22,7 +22,7 @@ aaaabbb`
 //  The 2-nd example
 rawInput[2] = require('./data/day_19_2')
 
-const { datasetNumber, execute } = require('./execute')
+const { execute } = require('./execute')
 
 const algorithm1 = (ruleLines, messages) => {
   const rulesMap = ruleLines.map(r => r.split(': ')).reduce(
@@ -51,7 +51,7 @@ const algorithm2 = (ruleLines, messages) => {
   return algorithm1(ruleLines, messages)
 }
 
-const compute = (algorithm, dataSet = datasetNumber) => {
+const compute = (algorithm, dataSet) => {
   const [ruleLines, messages] = rawInput[dataSet].split('\n\n').map(s => s.split('\n'))
 
   return algorithm(ruleLines, messages)

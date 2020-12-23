@@ -21,7 +21,7 @@ Player 2:
 //  The 2-nd example
 rawInput[2] = ``
 
-const { assert, datasetNumber, debug, execute } = require('./execute')
+const { assert, debug, execute } = require('./execute')
 
 assert.hook(() => {
   console.log('--- BREAKPOINT ---') //  Yeah, sometimes I have to use this!
@@ -44,6 +44,9 @@ const dealCardsFrom = decks => decks.reduce(
 //  The current winner consumes everything on table.
 const grabCards = (cards, decks, winner) => {
   decks[winner].push(cards[winner])
+  if (!(cards instanceof Array)) {
+    return
+  }
   cards.forEach((v, i) => i === winner || decks[winner].push(cards[i]))
 }
 
@@ -63,13 +66,16 @@ const algorithm1 = (decks, data) => {
 const hash = decks => decks.map((d, i) => i + ': ' + d.join(' ')).join(', ')
 
 //  Solves the part #2. Returns a defined value on end.
+//  NB: I managed to break this code after solving the puzzle!
 const algorithm2 = (decks, data) => {
+  let v
   const { rounds } = data, level = rounds.length, key = hash(decks)
 
   if (debug) trace(decks, rounds[level - 1], level)
-  if (typeof (data.cards = dealCardsFrom(decks)) === 'number') {
-    return 0
+  if (typeof (v = dealCardsFrom(decks)) === 'number') {
+    return 0        //  There was direct assignment to data.cards, causing a crash!
   }
+  data.cards = v    //  Todo: fix the algorithm!
   if (data.history.has(key) && data.history.get(key) <= level) {
     return (data.winner = 0)                //  Part 2, rule 1
   }
@@ -95,7 +101,7 @@ const parseInput = input => {
   return lines.slice(1).map(s => 1 * s)
 }
 
-const compute = (algorithm, dataSet = datasetNumber) => {
+const compute = (algorithm, dataSet) => {
   const decks = rawInput[dataSet].split('\n\n').map(v => parseInput(v))
   const recent = { history: new Map(), rounds: [0] }
 
