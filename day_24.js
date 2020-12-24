@@ -37,26 +37,19 @@ assert.hook(() => {
 })
 //  --- End of boilerplate ---
 
-//  Directions stuff.
+//  Directional stuff.
 const dirs = [[0, 2], [0, -2], [-1, 1], [-1, -1], [1, 1], [1, -1]]
-const add = ([a, b], [c, d]) => [a + c, b + d]
-const shf = (r, [c, d]) => {
-  r[0] += c
-  r[1] += d
-}
+const move = ([a, b], [c, d]) => [a + c, b + d]
 const regExp = /^(e)?(w)?(ne)?(nw)?(se)?(sw)?/
 
-//  Parse one line into tile coordinate.
+//  Parse a line into tile coordinates.
 const parseLine = line => {
   let xy = [0, 0]
 
-  for (let s = line, r; s && (r = regExp.exec(s)) && r[0];) {
-    const i = r.findIndex((v, i) => i && v) - 1
-    assert(i >= 0, 'dirs')
-    assert(dirs[i], 'dirs1')
-    const d = dirs[i]
-    shf(xy, d)
-    s = s.slice(r[i + 1].length)
+  for (let s = line, i, r; s; s = s.slice(r[i + 1].length)) {
+    i = (r = regExp.exec(s)).findIndex((v, i) => i && v) - 1
+    assert(i >= 0 && dirs[i], 'dirs')
+    xy = move(xy, dirs[i])
   }
   return xy
 }
@@ -69,6 +62,7 @@ const parseLine = line => {
 const algorithm1 = ({ blacks, tilesToFlip }) => {
   for (const xy of tilesToFlip) {
     const key = xy.join(',')
+
     if (blacks.has(key)) {
       blacks.delete(key)
     } else {
@@ -88,7 +82,7 @@ const algorithm2 = (shared) => {
   for (const thisKey of old.values()) {
     const xy = thisKey.split(',').map(s => 1 * s)
     const blacksNearBlack = dirs.reduce((n, d) => {
-      const key = add(xy, d).join(',')
+      const key = move(xy, d).join(',')
       if (old.has(key)) {
         ++n
       } else {
@@ -98,6 +92,7 @@ const algorithm2 = (shared) => {
     }, 0)
     if (!(blacksNearBlack === 0 || blacksNearBlack > 2)) blacks.add(thisKey)
   }
+
   for (const [key, n] of whites.entries()) {
     assert(!blacks.has(key), 'already')
     assert(!old.has(key), 'was')
