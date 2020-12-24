@@ -6,6 +6,8 @@ the files named like `day_xx.js` contain daily quiz solutions as they were born 
 quick and dirty - with no afterwards-makeup.
 Sometimes a `day_xx.nice.js` is there, though.
 
+_**NB:** Somehow, I managed to break the `day_22.js` code. Will get back to this later._ 
+
 ### Diary
 
 * `day 04:` joined the races, with just 80 hrs of delay 🐌🐌🐌
