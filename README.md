@@ -56,6 +56,9 @@ So I took a nap instead. After this, everything was so much better.
 the rules of part #2. Perhaps I should play more cards and code less? 🤔
 * `day 23:` The part #1 was almost trivial, I made lot of stupid mistakes of course.
 I failed to solve the computational complexity problem with #2, though. 🥶
+* `day 24:` A relatively simple simulation, similar to day 19.
+I wasted some time on my hyper-simple coordinates space presentation, which turned out
+to be flawed 😳. Otherwise, it was fun. 🌮🍺
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -65,7 +68,8 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
-| 22 | 4643 | 03:02:59 |  |  |  |
+| 24 | 3816 | 01:51:21 | 3751 | 03:00:44 | 3 |
+| 23 | 4643 | 03:02:59 |  |  |  |
 | 22 | 4163 | 01:02:30 | 5008 | 04:22:07 | **2** |
 | 21 | 7867 | 08:50:59 | 7895 | 09:35:48 | 6 |
 | 20 | 6655 | 08:15:59 |  |  |  |

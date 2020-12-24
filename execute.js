@@ -22,7 +22,7 @@ let cliArgs = [], debug = false, help
 
 //  label, fn, algorithm, ...defaults)
 const execute = (label, fn, ...parms) => {
-  let args = [0], [algorithm, ...defaults] = parms
+  let args = cliArgs.slice(), [algorithm, ...defaults] = parms
 
   if (typeof algorithm !== 'function') defaults = parms, algorithm = undefined
 
@@ -49,17 +49,18 @@ const assertionHook = (callback) => {
 
 if (process.argv.length > 2) {
   let bad = false, v
+
   for (const arg of process.argv.slice(2)) {
     if (arg[0] === 'd') {
       debug = true
     } else if (arg[0] === 'h') {
       help = true
     } else {
-
       cliArgs.push(v = 1 * arg)
       if (!(v >= 0)) bad = true
     }
   }
+
   if (help) {
     process.stdout.write(usage)
     process.exit(0)
@@ -70,6 +71,8 @@ if (process.argv.length > 2) {
     process.exit(1)
   }
 }
+if (!cliArgs.length) cliArgs.push(0)
+
 
 exports = module.exports = execute
 
