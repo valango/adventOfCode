@@ -61,7 +61,7 @@ I failed to solve the computational complexity problem with #2, though. 🥶
 * `day 24:` A relatively simple simulation, similar to day 19.
 I wasted some time on my hyper-simple coordinates space presentation, which turned out
 to be flawed 😳. Otherwise, it was fun. 🌮🍺
-* `day 25:` Omg... yet another number crunching madness! Sweating the blood I finally
+* `day 25:` Omg... yet another number crunching madness! Painfully, I finally
 completed the part #1, only to learn I can't get to part#2 w/o solving all the previous
 puzzles (I still have 2 pending) first. 😝<br />
 _**Merry Christmas, everybody!**_ 🌲🌲🌲🌲🌲✨🌲🌲🌲🌲🌲
