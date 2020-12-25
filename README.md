@@ -61,6 +61,10 @@ I failed to solve the computational complexity problem with #2, though. 🥶
 * `day 24:` A relatively simple simulation, similar to day 19.
 I wasted some time on my hyper-simple coordinates space presentation, which turned out
 to be flawed 😳. Otherwise, it was fun. 🌮🍺
+* `day 25:` Omg... yet another number crunching madness! Sweating the blood I finally
+completed the part #1, only to learn I can't get to part#2 w/o solving all the previous
+puzzles (I still have 2 pending) first. 😝<br />
+_**Merry Christmas, everybody!**_ 🌲🌲🌲🌲🌲✨🌲🌲🌲🌲🌲
 
 ### Track record
 My ranking placements and final times for puzzle 1 and 2 by days. The '_%_'
@@ -70,6 +74,7 @@ the Europeans (and Africans, too) an unfair advantage here. 😜
 
 | day | Rank 1 | Time 1 | Rank 2 | Time 2 | % |
 | ---: | ---: | :---: | ---: | :---: |---: |
+| 25 | 5662 | 04:06:02 |  |  |  |
 | 24 | 3816 | 01:51:21 | 3751 | 03:00:44 | 3 |
 | 23 | 4643 | 03:02:59 |  |  |  |
 | 22 | 4163 | 01:02:30 | 5008 | 04:22:07 | **2** |
